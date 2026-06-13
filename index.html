@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <meta charset="UTF-8">
+ <title>Songo</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+ <div id="conteneur-jeu">
+ <div id="panneau-scores">
+ <div class="score-bloc">Joueur 2 (Nord) : <span id="score-j2">0</span></div>
+   <div id="affichage-central-tour">AU TOUR DU JOUEUR 1</div>
+   <div class="score-bloc">Joueur 1 (Sud) : <span id="score-j1">0</span></div>
+    </div>
+    <div id="panneau-notification" class="hidden">
+    <span id="texte-erreur"></span>
+</div>
+<div id="tablier">
+   <div class="rangee">
+    <div class="case-trou" data-index="13"><span class="compteur-graines">5</span></div>
+     <div class="case-trou" data-index="12"><span class="compteur-graines">5</span></div>
+     <div class="case-trou" data-index="11"><span class="compteur-graines">5</span></div>
+     <div class="case-trou" data-index="10"><span class="compteur-graines">5</span></div>
+     <div class="case-trou" data-index="9"><span class="compteur-graines">5</span></div>
+     <div class="case-trou" data-index="8"><span class="compteur-graines">5</span></div>
+     <div class="case-trou" data-index="7"><span class="compteur-graines">5</span></div>
+      </div>
+
+            <div class="rangee">
+                <div class="case-trou" data-index="0"><span class="compteur-graines">5</span></div>
+                <div class="case-trou" data-index="1"><span class="compteur-graines">5</span></div>
+                <div class="case-trou" data-index="2"><span class="compteur-graines">5</span></div>
+                <div class="case-trou" data-index="3"><span class="compteur-graines">5</span></div>
+                <div class="case-trou" data-index="4"><span class="compteur-graines">5</span></div>
+                <div class="case-trou" data-index="5"><span class="compteur-graines">5</span></div>
+                <div class="case-trou" data-index="6"><span class="compteur-graines">5</span></div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="btn-recommencer">reniatialiser la partie</button>
+        </div>
+    </div>
+ <script src="script1.js"></script>
+</body>
+</html>
+
+
