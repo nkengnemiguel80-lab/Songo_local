@@ -1,15 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6;/*(gris très clair)*/
+    /* Nouveau background sombre boisé qui fait ressortir le jeu */
+    background: radial-gradient(circle at center, #1a100a 0%, #0a0604 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 10px; /* Évite que le jeu colle aux bords de l'écran sur mobile */
 }
 
 #conteneur-jeu {
-    width: 680px;
+    width: 100%;
+    max-width: 680px; /* S'adapte sur mobile tout en gardant tes 680px max sur PC */
 }
 
 /* En-tête avec scores */
@@ -38,7 +41,6 @@ body {
     text-transform: uppercase;
 }
 
-
 #tablier {
     background-color: #854d0e; /* Couleur bois marron */
     padding: 25px;
@@ -46,16 +48,18 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Modifié pour le téléphone : Grid évite que les trous sortent de l'écran */
 .rangee {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
     margin: 20px 0;
 }
 
 /* Les Trous */
 .case-trou {
-    width: 65px;
-    height: 65px;
+    width: 100%; /* S'adapte automatiquement à la grille */
+    aspect-ratio: 1 / 1; /* Reste un cercle parfait */
     background-color: #451a03; /*(marron chocolat très fonce)*/
     border-radius: 50%;
     display: flex;
@@ -71,14 +75,12 @@ body {
     transform: scale(1.05);
 }
 
-
 .compteur-graines {
     color: #ffffff;/*(Blanc pur)*/
     font-size: 1.5em;
     font-weight: bold;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
-
 
 .actions {
     text-align: center;
@@ -99,4 +101,25 @@ body {
 
 #btn-recommencer:hover {
     background-color: #334155;/*(un bleu-gris fonce)*/
+}
+
+/* Optimisations spécifiques pour les petits téléphones */
+@media (max-width: 480px) {
+    #panneau-scores {
+        flex-direction: column; /* Aligne les scores verticalement si l'écran est trop petit */
+        gap: 10px;
+        padding: 10px;
+    }
+    .score-bloc {
+        font-size: 1em;
+    }
+    #tablier {
+        padding: 12px;
+    }
+    .rangee {
+        gap: 5px;
+    }
+    .compteur-graines {
+        font-size: 1.1em; /* Réduit un peu la taille du texte des graines sur mobile */
+    }
 }
