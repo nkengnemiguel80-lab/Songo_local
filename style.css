@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    /* Uniquement le background de changé ici */
     background: radial-gradient(circle at center, #1a100a 0%, #0a0604 100%);
     display: flex;
     justify-content: center;
@@ -100,4 +99,11 @@ body {
 
 #btn-recommencer:hover {
     background-color: #334155;/*(un bleu-gris fonce)*/
+}
+
+/* --- Correction pour la ligne d'erreur --- */
+#texte-erreur {
+    color: #ff8b80; /* Un rouge/rose clair très lisible sur fond sombre */
+    font-weight: bold;
+    font-size: 1.1em;
 }

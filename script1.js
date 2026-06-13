@@ -180,7 +180,7 @@ async function traiterCoupLocal(indexCase) {
         plateau[currentIndex]++;
         graines--;
         actualiserInterfaceGraphique();
-        await delaiEgrenage(500); 
+        await delaiEgrenage(750); 
     }
 
     // condition de captures des graines
